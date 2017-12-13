@@ -52,7 +52,7 @@ let getUser = () => {
     // existe el usuario?
     if ( user ) {
       console.log( user )
-      $('.saludo').html(`Tu usuario es: <b>${ user.email }</b>`)
+      $('.saludo').html(`Tu correo es: <b>${ user.email }</b>, tu displayname de facebook es: ${ user.displayName }`)
       $('#access').hide()
       $('#logged').show()
     } else {
