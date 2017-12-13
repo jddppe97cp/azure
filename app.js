@@ -13,6 +13,8 @@ $(function () {
     $(this).addClass('active');
     e.preventDefault();
   });
+
+  $('#.fbLogo').click( fbLogin )
 });
 
 let sendEmail = () => {
@@ -98,5 +100,13 @@ let recoverPass = () => {
 }
 
 var fbLogin = function () {
-	//Facebook login actions...
+  //Facebook login actions...
+  
+  let provider = new firebase.auth.FacebookAuthProvider()
+  firebase.auth().signInWithPopup( provider )
+    .then((result) => {
+      console.log( result )
+    }, (err) => {
+      console.log( err )
+    })
 }
