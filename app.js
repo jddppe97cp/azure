@@ -14,7 +14,7 @@ $(function () {
     e.preventDefault();
   });
 
-  $('#.fbLogo').click( fbLogin )
+  $('.fbLogo').click( fbLogin )
 });
 
 let sendEmail = () => {
